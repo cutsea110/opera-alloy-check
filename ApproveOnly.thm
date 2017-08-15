@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha">
+
+<projection> <type name="Time"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="Time"/>
+   <type name="univ"/>
+   <type name="&#x4fdd;&#x5b58;"/>
+   <type name="&#x4fdd;&#x7559;"/>
+   <type name="&#x4fdd;&#x7559;&#x89e3;&#x9664;"/>
+   <type name="&#x5374;&#x4e0b;"/>
+   <type name="&#x627f;&#x8a8d;"/>
+   <type name="&#x751f;&#x6210;"/>
+   <type name="&#x7533;&#x8acb;"/>
+   <type name="&#x7533;&#x8acb;&#x8005;&#x5dee;&#x3057;&#x623b;&#x3057;"/>
+   <type name="&#x78ba;&#x8a8d;"/>
+   <type name="&#x78ba;&#x8a8d;&#x8005;&#x5dee;&#x3057;&#x623b;&#x3057;"/>
+   <type name="seq/Int"/>
+   <set name="$show_t" type="Report"/>
+   <set name="$&#x627f;&#x8a8d;&#x3055;&#x308c;&#x308b;&#x3082;&#x306e;&#x304c;&#x3042;&#x308b;_r" type="Report"/>
+   <set name="$&#x627f;&#x8a8d;&#x3055;&#x308c;&#x308b;&#x3082;&#x306e;&#x304c;&#x3042;&#x308b;_t" type="Time"/>
+</node>
+
+<node label="(-_-)zzz">
+   <type name="boolean/True"/>
+</node>
+
+<node label="(^-^)v">
+   <type name="boolean/False"/>
+</node>
+
+<node shape="Box" color="White" label="&#x5831;&#x544a;&#x66f8;">
+   <type name="Report"/>
+</node>
+
+<node shape="Dbl Circle" color="Red">
+   <type name="Approved"/>
+</node>
+
+<node shape="Egg" color="Yellow">
+   <type name="Draft"/>
+</node>
+
+<node shape="House" color="Blue">
+   <type name="Confirmed"/>
+</node>
+
+<node shape="Trapezoid" color="Green">
+   <type name="Requested"/>
+</node>
+
+<node style="Bold">
+   <set name="First" type="ordering/Ord"/>
+   <set name="Next" type="ordering/Ord"/>
+</node>
+
+<node visible="no">
+   <type name="Event"/>
+   <type name="boolean/Bool"/>
+   <type name="ordering/Ord"/>
+</node>
+
+<node visible="yes" hideunconnected="yes">
+   <type name="Status"/>
+</node>
+
+<edge attribute="no">
+   <relation name="status"> <type name="Report"/> <type name="Status"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="ev"> <type name="Report"/> <type name="Event"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes" label="-^v- : ">
+   <relation name="is_hold"> <type name="Report"/> <type name="boolean/Bool"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

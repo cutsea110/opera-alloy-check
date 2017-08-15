@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha">
+
+<projection> <type name="Time"/> <type name="&#x30b7;&#x30b9;&#x30c6;&#x30e0;"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="BD"/>
+   <type name="Int"/>
+   <type name="RegularEvent"/>
+   <type name="String"/>
+   <type name="Time"/>
+   <type name="univ"/>
+   <type name="&#x30b5;&#x30a4;&#x30f3;&#x30a2;&#x30a6;&#x30c8;"/>
+   <type name="&#x30b5;&#x30a4;&#x30f3;&#x30a4;&#x30f3;"/>
+   <type name="&#x30b7;&#x30b9;&#x30c6;&#x30e0;"/>
+   <type name="&#x30c7;&#x30fc;&#x30bf;&#x64cd;&#x4f5c;"/>
+   <type name="&#x4f1a;&#x793e;&#x9078;&#x629e;"/>
+   <type name="&#x5b9f;&#x65bd;&#x90e8;&#x9580;"/>
+   <type name="&#x696d;&#x52d9;&#x7ba1;&#x7406;&#x90e8;"/>
+   <type name="&#x7d4c;&#x7406;"/>
+   <type name="ordering/Ord"/>
+   <type name="seq/Int"/>
+   <set name="First" type="ordering/Ord"/>
+   <set name="Next" type="ordering/Ord"/>
+</node>
+
+<node shape="Box" color="Gray">
+   <type name="&#x5229;&#x7528;&#x8005;"/>
+</node>
+
+<node visible="no">
+   <type name="Event"/>
+   <set name="post" type="Event"/>
+</node>
+
+<node visible="no" numberatoms="yes" shape="Parallelogram" color="Green">
+   <type name="&#x30d1;&#x30b9;&#x30ef;&#x30fc;&#x30c9;"/>
+</node>
+
+<node visible="no" shape="Box" color="Blue">
+   <type name="&#x30ed;&#x30fc;&#x30eb;"/>
+</node>
+
+<node visible="no" shape="Ellipse" color="Yellow">
+   <type name="&#x30bb;&#x30c3;&#x30b7;&#x30e7;&#x30f3;"/>
+</node>
+
+<node visible="no" shape="Inv Triangle" color="Red">
+   <type name="&#x4f1a;&#x793e;"/>
+</node>
+
+<node visible="yes">
+   <set name="pre" type="Event"/>
+   <set name="&#x63a5;&#x7d9a;" type="&#x30bb;&#x30c3;&#x30b7;&#x30e7;&#x30f3;"/>
+</node>
+
+<edge color="Gray" visible="no" attribute="yes" constraint="no">
+   <relation name="&#x8a8d;&#x53ef;"> <type name="&#x5229;&#x7528;&#x8005;"/> <type name="&#x4f1a;&#x793e;"/> <type name="&#x30ed;&#x30fc;&#x30eb;"/> </relation>
+</edge>
+
+<edge layout="yes">
+   <relation name="&#x30a2;&#x30ab;&#x30a6;&#x30f3;&#x30c8;"> <type name="&#x30bb;&#x30c3;&#x30b7;&#x30e7;&#x30f3;"/> <type name="&#x5229;&#x7528;&#x8005;"/> </relation>
+</edge>
+
+<edge visible="no">
+   <relation name="$show_e"> <type name="&#x30bb;&#x30c3;&#x30b7;&#x30e7;&#x30f3;"/> <type name="Event"/> </relation>
+   <relation name="$show_e&apos;"> <type name="&#x30bb;&#x30c3;&#x30b7;&#x30e7;&#x30f3;"/> <type name="&#x30b5;&#x30a4;&#x30f3;&#x30a4;&#x30f3;"/> </relation>
+   <relation name="$show_e&apos;&apos;"> <type name="&#x30bb;&#x30c3;&#x30b7;&#x30e7;&#x30f3;"/> <type name="&#x30b5;&#x30a4;&#x30f3;&#x30a2;&#x30a6;&#x30c8;"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="session"> <type name="Event"/> <type name="&#x30bb;&#x30c3;&#x30b7;&#x30e7;&#x30f3;"/> </relation>
+   <relation name="&#x30b9;&#x30b3;&#x30fc;&#x30d7;"> <type name="&#x30c7;&#x30fc;&#x30bf;&#x64cd;&#x4f5c;"/> <type name="&#x4f1a;&#x793e;"/> </relation>
+   <relation name="&#x30ed;&#x30b0;"> <type name="&#x30bb;&#x30c3;&#x30b7;&#x30e7;&#x30f3;"/> <type name="Event"/> </relation>
+   <relation name="&#x5f79;&#x5272;"> <type name="&#x30bb;&#x30c3;&#x30b7;&#x30e7;&#x30f3;"/> <type name="&#x30ed;&#x30fc;&#x30eb;"/> </relation>
+   <relation name="&#x6240;&#x5c5e;"> <type name="&#x30bb;&#x30c3;&#x30b7;&#x30e7;&#x30f3;"/> <type name="&#x4f1a;&#x793e;"/> </relation>
+   <relation name="&#x6307;&#x5b9a;"> <type name="&#x4f1a;&#x793e;&#x9078;&#x629e;"/> <type name="&#x4f1a;&#x793e;"/> </relation>
+   <relation name="&#x8a8d;&#x8a3c;"> <type name="&#x5229;&#x7528;&#x8005;"/> <type name="&#x30d1;&#x30b9;&#x30ef;&#x30fc;&#x30c9;"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

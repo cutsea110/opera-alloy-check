@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha">
+
+<projection> <type name="Time"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="Time"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+   <set name="$&#x8acb;&#x6c42;&#x304c;&#x3042;&#x308b;_c" type="&#x8acb;&#x6c42;&#x66f8;"/>
+</node>
+
+<node hideunconnected="yes">
+   <type name="&#x4f5c;&#x696d;&#x5b9f;&#x7e3e;"/>
+</node>
+
+<node hideunconnected="yes" shape="Inv Triangle" color="Red">
+   <type name="&#x696d;&#x52d9;&#x7d42;&#x4e86;&#x5831;&#x544a;&#x66f8;"/>
+</node>
+
+<node hideunconnected="yes" shape="Lined Diamond" color="Gray">
+   <type name="&#x8acb;&#x6c42;&#x66f8;"/>
+</node>
+
+<node shape="Box" color="Blue">
+   <type name="&#x5927;&#x9805;&#x76ee;"/>
+</node>
+
+<node shape="Parallelogram" color="Green">
+   <type name="&#x53d7;&#x6ce8;"/>
+</node>
+
+<node style="Bold">
+   <set name="First" type="ordering/Ord"/>
+   <set name="Next" type="ordering/Ord"/>
+</node>
+
+<node visible="no">
+   <type name="ordering/Ord"/>
+</node>
+
+<node visible="no" shape="Ellipse" color="Yellow">
+   <type name="&#x30b0;&#x30eb;&#x30fc;&#x30d7;"/>
+</node>
+
+<edge visible="no" attribute="yes">
+   <relation name="GRP"> <type name="&#x5927;&#x9805;&#x76ee;"/> <type name="&#x30b0;&#x30eb;&#x30fc;&#x30d7;"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
